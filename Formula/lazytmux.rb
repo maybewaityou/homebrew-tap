@@ -5,23 +5,23 @@
 class Lazytmux < Formula
   desc "Terminal-based interactive tmux session manager, inspired by lazyssh."
   homepage "https://github.com/maybewaityou/lazytmux"
-  version "0.1.15"
+  version "0.1.16"
   license "Apache-2.0"
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maybewaityou/lazytmux/releases/download/v0.1.15/lazytmux_darwin_amd64.tar.gz"
-      sha256 "57aeb9dd7347b47ed6167ffc67169c5714570e846114570edc48a4af4700473e"
+      url "https://github.com/maybewaityou/lazytmux/releases/download/v0.1.16/lazytmux_darwin_amd64.tar.gz"
+      sha256 "1e1f200e97e474cfe9f49b04850c874d71cde016f8378aaf22410e0387a5fcec"
 
       define_method(:install) do
         bin.install "lazytmux"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/maybewaityou/lazytmux/releases/download/v0.1.15/lazytmux_darwin_arm64.tar.gz"
-      sha256 "61acdf0f7587be55123f7bf889ed99bcc31a86464c5460b714f5d88cddb3ab75"
+      url "https://github.com/maybewaityou/lazytmux/releases/download/v0.1.16/lazytmux_darwin_arm64.tar.gz"
+      sha256 "0ee93089c24e728959d00148947e28557f3f6d24f2c400814537eccf107f7b97"
 
       define_method(:install) do
         bin.install "lazytmux"
@@ -31,15 +31,15 @@ class Lazytmux < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maybewaityou/lazytmux/releases/download/v0.1.15/lazytmux_linux_amd64.tar.gz"
-      sha256 "5205f74e0436cb7f047b38a71de920f866d98976c9f4b8963d44fd1227b6a121"
+      url "https://github.com/maybewaityou/lazytmux/releases/download/v0.1.16/lazytmux_linux_amd64.tar.gz"
+      sha256 "2552f4cd52cd36b6020c9098361e6417c4549640556f0928d2a7789683fc4495"
       define_method(:install) do
         bin.install "lazytmux"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maybewaityou/lazytmux/releases/download/v0.1.15/lazytmux_linux_arm64.tar.gz"
-      sha256 "2faecc5383f35822a8a6fa5975363803744c73547caba13b581c18e268899712"
+      url "https://github.com/maybewaityou/lazytmux/releases/download/v0.1.16/lazytmux_linux_arm64.tar.gz"
+      sha256 "af6c399915a3ddfd32162cba43f34bb5ccf451b67070be478c77bc4e42c6a95e"
       define_method(:install) do
         bin.install "lazytmux"
       end
