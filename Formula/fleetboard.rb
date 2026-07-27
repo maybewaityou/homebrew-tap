@@ -11,7 +11,7 @@ class Fleetboard < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/maybewaityou/fleetboard/releases/download/v0.1.1/fleetboard_darwin_amd64.tar.gz"
-      sha256 "9633983de45d43c4e3203af548af7f43e79bf13a544b3def4cb79c189be9b4d6"
+      sha256 "710a4b315c9445dba82bf6738167a11641dc6101df7ba13d12eb9fea5843a0b4"
 
       define_method(:install) do
         bin.install "fleetboard"
@@ -19,7 +19,7 @@ class Fleetboard < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/maybewaityou/fleetboard/releases/download/v0.1.1/fleetboard_darwin_arm64.tar.gz"
-      sha256 "1bd919561310381a6c104147a0620038ac94852e251483d6be3b66769d1db345"
+      sha256 "7f4c5629e94164f3ca5a06681542db36c14beaeae06ee4b53080293bfe61389d"
 
       define_method(:install) do
         bin.install "fleetboard"
@@ -30,14 +30,14 @@ class Fleetboard < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/maybewaityou/fleetboard/releases/download/v0.1.1/fleetboard_linux_amd64.tar.gz"
-      sha256 "d66b89648d401ec7675cc4a98c1959e5ba34e50ae2477af5830e39c11d351900"
+      sha256 "f42a3af8e25ddcdd94bd107234dae0adb4a81bab7fe8e916fee7adf0e8f9e79e"
       define_method(:install) do
         bin.install "fleetboard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/maybewaityou/fleetboard/releases/download/v0.1.1/fleetboard_linux_arm64.tar.gz"
-      sha256 "af6722e8fd44faba4a88035e655f7bdd9d3d122c78afe03e34369b0d9ed5bb7b"
+      sha256 "ad89594dafeea18f170725085a21d423c81da764399c5ac26e3476392d0e431a"
       define_method(:install) do
         bin.install "fleetboard"
       end
