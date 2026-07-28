@@ -5,21 +5,21 @@
 class Fleetboard < Formula
   desc "Terminal dashboard for AI coding-plan usage & balance across providers."
   homepage "https://github.com/maybewaityou/fleetboard"
-  version "0.1.2"
+  version "0.2.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maybewaityou/fleetboard/releases/download/v0.1.2/fleetboard_darwin_amd64.tar.gz"
-      sha256 "2b357c6ca58bf60a7ff1dc406e03f81e0f085eb72d98945a287c6133fc60ced6"
+      url "https://github.com/maybewaityou/fleetboard/releases/download/v0.2.1/fleetboard_darwin_amd64.tar.gz"
+      sha256 "083fd3e2ea2bc8a5e062ad7e329d699cb5c1253e3384019f04d35ab38ce83e09"
 
       define_method(:install) do
         bin.install "fleetboard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/maybewaityou/fleetboard/releases/download/v0.1.2/fleetboard_darwin_arm64.tar.gz"
-      sha256 "cb19332de1b05f02b23e14e95a3af11685c48199d6db90e91934bd31583adc72"
+      url "https://github.com/maybewaityou/fleetboard/releases/download/v0.2.1/fleetboard_darwin_arm64.tar.gz"
+      sha256 "c011a3841b65bfd2cdb7c1b692b272e51183c46025715f332563693a6a7c55eb"
 
       define_method(:install) do
         bin.install "fleetboard"
@@ -29,15 +29,15 @@ class Fleetboard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maybewaityou/fleetboard/releases/download/v0.1.2/fleetboard_linux_amd64.tar.gz"
-      sha256 "d1022202714424b851c1037b87271646a93dab1bf563a0a1e779c6350e7ea74a"
+      url "https://github.com/maybewaityou/fleetboard/releases/download/v0.2.1/fleetboard_linux_amd64.tar.gz"
+      sha256 "8965723d5887d9f0b4e1a8816a465e6020e79ed0ce8692fb7fa01cd613467b1d"
       define_method(:install) do
         bin.install "fleetboard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maybewaityou/fleetboard/releases/download/v0.1.2/fleetboard_linux_arm64.tar.gz"
-      sha256 "b5763e2be5d2ce23770df8dda664dd7c580903f51974e6d151b7d3efa6fb00c7"
+      url "https://github.com/maybewaityou/fleetboard/releases/download/v0.2.1/fleetboard_linux_arm64.tar.gz"
+      sha256 "bb959cf7d7de7f4a3ccd3daef43fd5e4d58babe390e364476afd197abff64aa0"
       define_method(:install) do
         bin.install "fleetboard"
       end
